@@ -31,7 +31,7 @@ class Controller extends ChangeNotifier {
       print("Invalid Click");
     }
 
-    // Check for draw after every move
+    // Check for draw after complete move
     if (click == 9) {
       matchDrawMessage();
     }
