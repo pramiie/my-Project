@@ -63,7 +63,8 @@ class Login extends ConsumerWidget{
                             }),
                             SizedBox(height: 10.h,),
                             CommonButton(onTap:(){
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> Register()));
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (_)=> Register()));
                             },child: Text("Sign Up",style: TextStyle(fontSize:16.sp,fontWeight: FontWeight.w400,color: Colors.white)),),
                           ],
                         ),

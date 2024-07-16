@@ -14,6 +14,7 @@ class Register extends ConsumerWidget{
   Widget build(BuildContext context,WidgetRef ref) {
     final registerWatch=ref.watch(registerController);
     return Scaffold(
+
       body:Container(
       
         color: Color(0xFF4D426D),

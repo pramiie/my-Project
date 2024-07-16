@@ -1,4 +1,5 @@
 import 'package:chat_app/ui/home.dart';
+import 'package:chat_app/ui/utils/Common_widget/bottomNavigationBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../service/firebase_auth_service.dart';
@@ -17,7 +18,7 @@ if(registerKey.currentState!.validate()){
       final authResponse = await FirebaseAuthService.authService.signUpWithEmailAndPass(email: emailController.text, password: passwordController.text);
       if(authResponse.user != null){
         if(context.mounted){
-          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>Home()), (route) => false);
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>Bnb()), (route) => false);
         }
       }
 
