@@ -11,7 +11,7 @@ class FireStoreService {
 
   Future<void> addUserToFirebase(UserModel user) async {
     FirebaseSingleTon.firebaseSingleTon.fireStore
-        .collection('users1')
+        .collection('user')
         .doc(user.uid)
         .set(user.toJson());
   }

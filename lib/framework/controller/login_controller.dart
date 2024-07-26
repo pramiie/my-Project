@@ -3,6 +3,7 @@ import 'package:chat_app/ui/utils/Common_widget/bottomNavigationBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../service/firebase_auth_service.dart';
+
 final loginController = ChangeNotifierProvider((ref) => LoginController());
 class LoginController extends ChangeNotifier {
 
@@ -16,6 +17,7 @@ class LoginController extends ChangeNotifier {
       print(passwordController.text);
         final  response = await FirebaseAuthService.authService.signInWithEmailAndPass(email:emailController.text, password: passwordController.text);
       if(response.user != null){
+
         if(context.mounted){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>const Bnb()), (route) => false);
 
