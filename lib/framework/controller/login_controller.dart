@@ -14,7 +14,7 @@ class LoginController extends ChangeNotifier {
     if(loginKey.currentState!.validate()){
       print(emailController.text);
       print(passwordController.text);
-      final  response = await FirebaseAuthService.authService.signInWithEmailAndPass(email:emailController.text, password: passwordController.text);
+        final  response = await FirebaseAuthService.authService.signInWithEmailAndPass(email:emailController.text, password: passwordController.text);
       if(response.user != null){
         if(context.mounted){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>const Bnb()), (route) => false);
